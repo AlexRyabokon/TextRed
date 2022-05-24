@@ -1,0 +1,1 @@
+Sum of numbers in fileTask10.txt is :464 

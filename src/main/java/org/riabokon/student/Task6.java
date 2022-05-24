@@ -10,9 +10,8 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Collections;
-import java.util.List;
+
 
 public class Task6 {
 
@@ -27,6 +26,9 @@ public class Task6 {
             "In my heart's love hath no man than yourself:\n",
             "Nay, task me to my word; approve me, lord."};
     ArrayList<String> stringToWrite = new ArrayList<>();
+
+    static int counter = 0;
+
 
     // берет массив строк и возвращает их как ArrayList
     public ArrayList<String> getArrayList(String[] strings) {
@@ -61,12 +63,15 @@ public class Task6 {
             Collections.addAll(finalStringArray,dividedWords);
             for (int j = 0; j < dividedWords.length; j++) {
                 if (dividedWords[j].length() >= 3 && dividedWords[j].length() <= 5) {
+                   // counter++;
+                   // if (counter% 2 == 0){
                     finalStringArray.remove(dividedWords[j]);
+                   // }
                 }
             }
         }
         for (int k = 0; k < finalStringArray.size(); k++) {
-            return (finalStringArray.toString());
+            return (finalStringArray.toString() );
         }
 
         return null;
